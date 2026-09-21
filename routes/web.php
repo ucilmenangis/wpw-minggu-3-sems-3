@@ -1,9 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProdukController;
+
+// Routing menuju Controller
+Route::get('/produk', [ProdukController::class, 'index']);
+Route::get('/produk/{id}', [ProdukController::class, 'show']);
 
 // Acara 9
-
 Route::get('/', function () {
     return view('welcome');
 });
