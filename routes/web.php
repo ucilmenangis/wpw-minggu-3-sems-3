@@ -2,10 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\DemoFormController;
 
 // Routing menuju Controller
 Route::get('/produk', [ProdukController::class, 'index']);
 Route::get('/produk/{id}', [ProdukController::class, 'show']);
+Route::get('/demo-form', [DemoFormController::class, 'create']);
+Route::post('/submit-demo', [DemoFormController::class, 'store']);
 
 // Acara 9
 Route::get('/', function () {
